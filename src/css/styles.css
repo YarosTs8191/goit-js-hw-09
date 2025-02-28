@@ -17,6 +17,24 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0de58;
+  margin: 0 auto;
+  padding: 0;
+  width: 800px;
+  height: 400px;
+}
+.hw-9-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +43,16 @@
   padding: 0;
   list-style: none;
 }
-
+.gallery-main-title {
+  color: black;
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e0de58;
+}
 .gallery-item {
   flex-flow: calc(33.333% - 20px);
   max-width: 500px;
@@ -51,4 +78,73 @@
 }
 .gallery-back-link {
   align-items: center;
+}
+
+.back-link {
+  color: whitesmoke;
+  background-color: gray;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e0de58;
+  height: 800px;
+}
+.form-main-title {
+  color: black;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%; /* Робимо кнопку на всю ширину форми */
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
