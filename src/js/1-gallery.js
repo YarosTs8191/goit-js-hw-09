@@ -69,7 +69,6 @@ const images = [
 
 const galleryContainer = document.querySelector('.gallery');
 
-// 🔹 Створюємо HTML-розмітку галереї
 const galleryMarkup = images
   .map(
     ({ preview, original, description }) =>
@@ -83,7 +82,6 @@ const galleryMarkup = images
 
 galleryContainer.innerHTML = galleryMarkup;
 
-// 🔹 Ініціалізація SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,

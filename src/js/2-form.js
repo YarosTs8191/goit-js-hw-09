@@ -1,7 +1,6 @@
 const form = document.querySelector('.feedback-form');
 const STORAGE_KEY = 'feedback-form-state';
 
-// 🔹 Функція збереження стану у локальне сховище
 const saveFormState = () => {
   const formData = {
     email: form.elements.email.value.trim(),
@@ -10,7 +9,6 @@ const saveFormState = () => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 };
 
-// 🔹 Функція відновлення даних із сховища
 const loadFormState = () => {
   const savedData = localStorage.getItem(STORAGE_KEY);
   if (savedData) {
@@ -20,7 +18,6 @@ const loadFormState = () => {
   }
 };
 
-// 🔹 Функція обробки події submit
 const handleSubmit = event => {
   event.preventDefault();
 
@@ -38,9 +35,7 @@ const handleSubmit = event => {
   form.reset();
 };
 
-// 🔹 Вішаємо слухачі подій
 form.addEventListener('input', saveFormState);
 form.addEventListener('submit', handleSubmit);
 
-// 🔹 Відновлюємо дані при завантаженні сторінки
 loadFormState();
